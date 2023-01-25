@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/tutorials.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Tutorials</title>
+</head>
+
+<body class="tutorials_bg">
+    <div class="home_side_bar">
+        <div class="home_sBar">
+            <h1 class="title_2">Fitness Hall</h1> 
+            <ul class="list list-hover">
+                <div class="icon col-6 mx-auto p-3 my-5 scene active">
+                    <div class="icon_items"></div>
+                    <div class="icon_items"></div>
+                    <div class="icon_items"></div>
+                    <div class="icon_items"></div>
+                </div>
+                <div class="menu-items">
+                    <li><a href="/home"><span style=" color: rgb(255, 0, 109);" class="itemS"><i class="fa-solid fa-home fa-fade"></i></span>Home</a></li><br>
+                    <li><a href="/share_routine/new"><span style=" color: rgb(255, 0, 109);" class="itemS"><i class="fa-solid fa-circle-plus fa-beat"></i></span> Share </a></li><br>
+                    <li><a href="/logout"><span style=" color: rgb(255, 0, 109);" class="itemS"><i class="fa-solid fa-dumbbell fa-bounce"></i></span> Logout </a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="div-home p-3" id="home_container">
+        <div class="home-container">
+            <h1 class="majority-width text-white" id="check_this">Check this workouts "{{user.first_name}}"...</h1>
+        </div>
+        <h3 class=" wbm p-3 my-1 text-white ">Workouts by muscles:</h3>
+    </div>
+    <div class="w_muscles d-flex p-3 my-1 ">
+        <div id="links_nav" class="col">
+            <h3 class="m_name text-white p-3 "> Biceps: <span><i class="i fa-solid fa-circle-play fa-beat-fade " style="--fa-animation-duration: 3s";></i></span></h3>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=Li48VqEWiXI">- Get Bigger Biceps</a></li> <br>
+                <li><a href="https://www.youtube.com/watch?v=Y6-ucIkd2_s">- Top 4 Bicep Workouts</a></li><br>
+                <li><a href="https://www.youtube.com/shorts/_EcNMDGOCbA">- Bicep Tip!</a></li>
+            </ul>
+            <h3 class="m_name text-white p-3 "> Tricep: </h3>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=WtAF7H6nQqk">- Top 4 Tricep Workouts</a></li> <br>
+                <li><a href="https://www.youtube.com/watch?v=cl2cNIA6pkY">- Get Bigger Triceps</a></li> <br>
+                <li><a href="https://www.youtube.com/shorts/OTFZjgHVol4">- Tricep Tip!</a></li>
+            </ul>
+            <h3 class="m_name  text-white p-3 "> Shoulders:  </h3>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=xDyP3HZ0XTU&t=403s">- Fix Your Shoulder Routine</a></li> <br>
+                <li><a href="https://www.youtube.com/watch?v=ZuJ7PhmHr0A">- Bigger Shoulder Workouts</a></li><br>
+                <li><a href="https://www.youtube.com/shorts/HBRPqQlddCM">- Shoulder Tip!</a></li>
+            </ul>
+        </div>
+        <div id="links_nav" class="col">
+            <h3 class="m_name text-white p-3 ">Chest: <span><i class="i fa-solid fa-circle-play fa-beat-fade" style="--fa-animation-duration: 3s";></i></span></h3>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=6diTm60DS0k&t=517s">- Chest workouts techniques</a></li> <br>
+                <li><a href="https://www.youtube.com/watch?v=15UbMea5eeQ">- How to bench press</a></li><br>
+                <li><a href="https://www.youtube.com/shorts/wWSIjq2WB8c">- Chest Tip! </a></li>
+            </ul>
+            <h3 class="m_name  text-white p-3 "> Back: </h3>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=i0FSaUBzaeM">- Back Full Workout</a></li> <br>
+                <li><a href="https://www.youtube.com/watch?v=zML1kZRliBE">- Top 3 Best & Worst</a></li><br>
+                <li><a href="https://www.youtube.com/shorts/dron64dNqFU"> - Back Tip!</a></li>
+            </ul>
+            <h3 class="m_name  text-white p-3 "> Traps:</h3>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=6_W5xQNBAvc">- Train Traps</a></li> <br>
+                <li><a href="https://www.youtube.com/watch?v=Zz_CKzN949Y">- Trap Bar Deadlift</a></li><br>
+            </ul>
+        </div>
+        <div id="links_nav" class="col">
+            <h3 class="m_name text-white p-3 ">Legs: <span><i class="i fa-solid fa-circle-play fa-beat-fade" style="--fa-animation-duration: 3s";></i></span></h3>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=sbZRp5I4PZg">- How to train legs</a></li> <br>
+                <li><a href="https://www.youtube.com/watch?v=y3qpS9C2B7Q&t=532s">- Build strong legs</a></li>
+                <li><a href="https://www.youtube.com/watch?v=HE4YWPD3D_Y">- Squat Tutorials</a></li>
+                <li><a href="https://www.youtube.com/watch?v=P9IOX-xsrDs">- Romanian Deadlift</a></li>
+                <li><a href="https://www.youtube.com/watch?v=-wiVVR3HwJ0&t=669s">- Leg Workout techniques</a></li><br>
+                <li><a href="https://www.youtube.com/watch?v=p37HGSxW4tY">- Massive Legs</a></li><br>
+                <li><a href="https://www.youtube.com/shorts/JKJL9kOlgZg">- Legs Tip!</a></li><br>
+                <li><a href="https://www.youtube.com/shorts/1BIIORHJ2XI">- Legs Tip! #2</a></li><br>
+                <li><a href="https://www.youtube.com/shorts/7smv3j4BWVE">- Legs Tip! #3</a></li>
+            </ul>
+            <h3 class="m_name  text-white p-3 "> Learn this:  </h3>
+            <ul>
+                <li><a href="https://www.youtube.com/shorts/v0gO5U2GkXM"> - Motivation Tip!</a></li><br>
+                <li><a href="https://www.youtube.com/shorts/Ss5qJnq6VBM">- Stick to the basics</a></li><br>
+                <li><a href="https://www.youtube.com/shorts/-TQPIUaXEJM">- Fat loss mistake</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="w_t text-center">
+        <h1 class="w_time p-3 text-white">Workout Time <span><i class=" f fa-solid fa-fire fa-shake"></i></span></h1>
+    </div>
+
+</body>
+
+</html>

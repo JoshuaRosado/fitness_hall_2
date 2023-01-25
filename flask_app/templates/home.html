@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Home</title>
+</head>
+<!-- <audio src=""></audio> -->
+
+<body class="home_bg">
+    <div class="home_side_bar">
+        <div class="home_sBar">
+            <h1 class="title_2">Fitness Hall</h1> 
+            <ul class="list list-hover">
+                <div class="icon col-6 mx-auto p-3 my-5 scene active">
+                    <div class="icon_items"></div>
+                    <div class="icon_items"></div>
+                    <div class="icon_items"></div>
+                    <div class="icon_items"></div>
+                </div>
+                <div class="menu-items">
+                    <li><a href="/share_routine/new"><span style=" color: rgb(255, 0, 109);" class="itemS"><i class="fa-solid fa-circle-plus fa-beat"></i></span> Share </a></li><br>
+                    <li><a href="/tutorials"><span style=" color: rgb(255, 0, 109);" class="itemS"><i class="fa-solid fa-video fa-shake "></i></span> Tutorials </a></li><br>
+                    <li><a href="/logout"><span style=" color: rgb(255, 0, 109);" class="itemS"><i class="fa-solid fa-dumbbell fa-bounce"></i></span> Logout </a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="div-home p-3" id="home_container">
+        <div class="home-container">
+            <h1 class="majority-width" id="whats_new">What's new {{user.first_name}} {{user.last_name}}...</h1>
+
+        </div>
+
+        <h3 class="home_pgh p-1 my-1 ">Help guide others in their fitness journey </h3>
+        <div class="w_tbl">
+            <table class="table table-striped table-hover text-center mx-auto  " id="workout_table">
+                <thead class="wrk_tbl">
+                    <tr class="t_r table-row">
+                        <th>Name</th>
+                        <th>Experience Level</th>
+                        <th>Body Type(Goals)</th>
+                        <th>Days(Weekly)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for workout in workouts: %}
+                    <tr>
+                        <td class="name_col text-white">{{workout.user.first_name}} {{workout.user.last_name}}</td>
+                        <td class="experience_col text-white">{{workout.experience}}</td>
+                        <td class="goals_col text-white">{{workout.goals}}</td>
+                        <td class="days_col text-white">{{workout.days}}</td>
+                        <td class="action">
+                            <ul>
+                                <li><a class="routine " href="/view_routine/{{workout.id}}"><i class="fas fa-person-walking fa-fade" style="--fa-animation-duration: 2s";></i> Routine</a></li>
+                            {% if workout.user.id == user.id: %}
+                                <li><a class="ediT" href="/workout/edit/{{workout.id}}"><i class="fas fa-pencil fa-fw"></i> edit</a>
+                                <li><a class="delete" href="/workout/delete/{{workout.id}}"> <i class="fas fa-trash fa-fw"></i> delete</a>
+                            {% endif %}
+                            </ul>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="w_t text-center">
+        <h1 class="w_time p-3 ">Workout Time <span><i class=" f_home fa-solid fa-fire fa-bounce " style=" --fa-bounce-land-scale-x: 2";></i></span></h1>
+    </div>
+
+</body>
+
+</html>
