@@ -1,0 +1,75 @@
+#help{
+    font-size: 30px;
+    position: relative;
+    right: -315px;
+}
+
+#edit_title{
+    font-size: 50px;
+    font-weight: 600;
+    position: relative;
+    right:-44vh;
+    margin-top: 3vh;
+    padding: 0px;
+    text-decoration: underline;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+
+.edit_experience{
+    width: 600px;
+    margin: 20px;
+    margin-top: 4vh;
+    position: relative;
+    right: -42vh;
+    align-items: center;
+}
+.edit_form{
+
+    text-align: center;
+    border-radius: 10px;
+    background: linear-gradient(to top,black, rgba(0, 14, 38, 0.69));
+    box-shadow: 0 8px 32px rgb(2, 4, 24);
+    border-right:  2px solid rgba(106, 106, 106, 0.538);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(15px);
+    height: 60vh;
+    margin-top: 20px;
+    padding: 20px;
+
+}
+
+.routine_label_edit{
+    margin-left: 6vh;
+}
+
+
+#routine{
+    margin-left: -30px;
+}
+
+.edit_group{
+    margin-left: 16vh;
+    text-align: center;
+}
+
+.edit_routine_group{
+    margin-left: 12vh;
+    text-align: center;
+}
+
+.r_label{
+    margin-left: -10px;
+}
+
+.form-label{
+    color: rgb(255, 0 , 109);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.edit_icon{
+    margin-left: 68vh;
+    margin-bottom: -1vh;
+    font-size: 18px;
+}
