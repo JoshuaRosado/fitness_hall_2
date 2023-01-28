@@ -1,0 +1,52 @@
+.wbm{
+    text-align: center;
+    position: relative;
+    right: -45vh;
+}
+
+.w_muscles{
+    width: 150vh;
+    position: absolute;
+    top: 175px;
+    right: 20px;
+    padding: 10px;
+    height: 75vh;
+}
+
+#links_nav{
+    border-style:unset;
+    border-radius: 5px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.790), rgba(0, 14, 38, 0.790));
+    box-shadow: 0 8px 32px rgb(2, 4, 24);
+    border-right:  2px solid rgba(255, 255, 255, 0.538);
+    backdrop-filter: blur(2px) ;
+    -webkit-backdrop-filter:blur(2px);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 14vh;
+    font-size: 15px;
+
+}
+
+
+.m_name{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    font-weight: 400;
+}
+
+.i{
+    position: absolute;
+    right: -44vh;
+    top: 15px;
+    border-radius: 100%;
+    border: 3px dotted rgb(255,0,109);
+}
+
+.f{
+    color: rgb(255,0,109);
+    position: absolute;
+    right: -48vh;
+    bottom: 2.2vh;
+}
+
